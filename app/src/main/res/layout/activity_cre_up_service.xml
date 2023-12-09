@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:padding="20dp"
+    tools:context=".ui.operationser.CreUpServiceActivity">
+
+    <ImageView
+        android:id="@+id/imvBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/text" />
+
+    <TextView
+        android:id="@+id/tvId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/id"
+        android:textColor="@color/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imvBack" />
+
+    <TextView
+        android:id="@+id/tvIdInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/id_hint"
+        android:textColor="@color/text"
+        app:layout_constraintEnd_toEndOf="@+id/tvId"
+        app:layout_constraintStart_toStartOf="@+id/tvId"
+        app:layout_constraintTop_toBottomOf="@+id/tvId" />
+
+    <TextView
+        android:id="@+id/tvService"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/servicem_service"
+        android:textColor="@color/text"
+        app:layout_constraintEnd_toStartOf="@+id/tvPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIdInfo" />
+
+
+    <EditText
+        android:id="@+id/edService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/servicem_servic"
+        android:textColor="@color/text"
+        android:textColorHint="@color/text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvService" />
+
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/servicem_price"
+        android:textColor="@color/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvService"
+        app:layout_constraintTop_toBottomOf="@+id/tvIdInfo" />
+
+
+    <EditText
+        android:id="@+id/edPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/servicem_example"
+        android:textColor="@color/text"
+
+        android:textColorHint="@color/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
+
+    <TextView
+        android:id="@+id/tvBase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/servicem_base"
+        android:textColor="@color/text"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edPrice" />
+
+
+    <EditText
+        android:id="@+id/edBase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/servicem_administrac_n"
+        android:textColorHint="@color/text"
+        android:textColor="@color/text"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBase" />
+
+
+    <Button
+        android:id="@+id/btnOpeService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_create"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edBase" />
+</androidx.constraintlayout.widget.ConstraintLayout>

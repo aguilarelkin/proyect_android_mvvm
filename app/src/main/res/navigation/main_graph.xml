@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/employeFragment">
+
+    <fragment
+        android:id="@+id/employeFragment"
+        android:name="com.kto.employenexa.ui.employe.EmployeFragment"
+        android:label="fragment_employe"
+        tools:layout="@layout/fragment_employe" >
+        <action
+            android:id="@+id/action_employeFragment_to_createUpdateActivity"
+            app:destination="@id/createUpdateActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/createUpdateActivity"
+        android:name="com.kto.employenexa.ui.operation.CreateUpdateActivity"
+        android:label="activity_create_update"
+        tools:layout="@layout/activity_create_update" >
+        <argument
+            android:name="id"
+            app:argType="string"
+            app:nullable="true" />
+    </activity>
+    <fragment
+        android:id="@+id/servicemFragment"
+        android:name="com.kto.employenexa.ui.servicem.ServicemFragment"
+        android:label="fragment_servicem"
+        tools:layout="@layout/fragment_servicem" >
+        <action
+            android:id="@+id/action_servicemFragment_to_creUpServiceActivity"
+            app:destination="@id/creUpServiceActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/creUpServiceActivity"
+        android:name="com.kto.employenexa.ui.operationser.CreUpServiceActivity"
+        android:label="activity_cre_up_service"
+        tools:layout="@layout/activity_cre_up_service" >
+        <argument
+            android:name="id"
+            app:argType="string"
+            app:nullable="true" />
+    </activity>
+</navigation>

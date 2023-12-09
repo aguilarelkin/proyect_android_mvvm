@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:padding="20dp"
+    tools:context=".ui.operation.CreateUpdateActivity">
+
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/description_todo"
+        android:padding="20dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvId"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/edId"
+        style="@style/edit_style"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:hint="@string/id_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvId" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctFirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/edId">
+
+        <TextView
+            android:id="@+id/tvFirstname"
+            style="@style/text_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/firstname"
+            app:layout_constraintEnd_toStartOf="@+id/tvLastname"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edFirstname"
+            style="@style/edit_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/firstname_hint"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            app:layout_constraintEnd_toStartOf="@+id/edLastname"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFirstname" />
+
+        <TextView
+            android:id="@+id/tvLastname"
+            style="@style/text_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/lastname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvFirstname"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edLastname"
+            style="@style/edit_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/lastname_hint"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edFirstname"
+            app:layout_constraintTop_toBottomOf="@+id/tvLastname" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvM"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ctFirst" />
+
+    <EditText
+        android:id="@+id/edMail"
+        style="@style/edit_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/mail_hint"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvM" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctAB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edMail">
+
+        <TextView
+            android:id="@+id/tvAvatar"
+            style="@style/text_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/avatar"
+            app:layout_constraintEnd_toStartOf="@+id/tvBase"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edAvatar"
+            style="@style/edit_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/ed_image"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            app:layout_constraintEnd_toStartOf="@+id/edBase"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAvatar" />
+
+        <TextView
+            android:id="@+id/tvBase"
+            style="@style/text_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/base"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvAvatar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edBase"
+            style="@style/edit_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="no"
+            android:hint="@string/base_hint"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/tvBase" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvTe"
+        style="@style/text_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/telephone"
+        app:layout_constraintEnd_toStartOf="@+id/tvPass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ctAB" />
+
+    <EditText
+        android:id="@+id/edTelephone"
+        style="@style/edit_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="no"
+        android:hint="@string/telephone_hint"
+        android:inputType="phone"
+        app:layout_constraintEnd_toStartOf="@+id/edPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTe" />
+
+
+    <TextView
+        android:id="@+id/tvPass"
+        style="@style/text_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/telephone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvTe"
+        app:layout_constraintTop_toBottomOf="@+id/ctAB" />
+
+    <EditText
+        android:id="@+id/edPassword"
+        style="@style/edit_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="no"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edTelephone"
+        app:layout_constraintTop_toBottomOf="@+id/tvTe" />
+
+
+    <TextView
+        android:id="@+id/Rl"
+
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/role"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edTelephone" />
+
+    <TextView
+        android:id="@+id/edRole"
+        style="@style/edit_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/role_admin_tv"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Rl"
+        tools:ignore="SmallSp" />
+
+
+    <RadioGroup
+        android:id="@+id/rgRolesAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edRole">
+
+        <RadioButton
+            android:id="@+id/cbRoleAdmin"
+            style="@style/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:text="@string/role_admin" />
+
+        <RadioButton
+            android:id="@+id/cbRoleUser"
+            style="@style/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:checked="true"
+            android:text="@string/role_user" />
+
+        <RadioButton
+            android:id="@+id/cbRoleInvite"
+            style="@style/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/role_invite" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnOperation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/secondary_second"
+        android:text="@string/btn_create"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

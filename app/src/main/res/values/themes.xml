@@ -1,0 +1,32 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Employenexa" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/secondary</item>
+    </style>
+
+    <style name="Theme.Employenexa" parent="Base.Theme.Employenexa" />
+
+    <style name="text_style">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/text</item>
+    </style>
+
+    <style name="edit_style">
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:singleLine">true</item>
+        <item name="backgroundTint">@color/text</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColorHint">@color/text</item>
+    </style>
+
+    <style name="radio_group">
+        <item name="android:buttonTint">@color/secondary_second</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+</resources>

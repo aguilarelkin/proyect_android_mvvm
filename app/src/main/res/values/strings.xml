@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">employenexa</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //BottomBar
+    <string name="employe">Empleado</string>
+    <string name="service">Servicio</string>
+
+    //App
+    <string name="id">id</string>
+    <string name="firstname">firstname</string>
+    <string name="lastname">lastname</string>
+    <string name="mail">mail</string>
+    <string name="avatar">avatar</string>
+    <string name="base">base</string>
+    <string name="role">role</string>
+    <string name="id_hint">43</string>
+    <string name="firstname_hint">Natalia</string>
+    <string name="lastname_hint">Bonilla</string>
+    <string name="mail_hint">natalia@gmail.com</string>
+    <string name="base_hint">Secretary</string>
+    <string name="telephone_hint">+45 3569122309</string>
+    <string name="role_hint">ROLE_ADMIN</string>
+    <string name="btn_update">Update</string>
+    <string name="role_admin">ADMIN</string>
+    <string name="role_user">USER</string>
+    <string name="role_invite">INVITE</string>
+    <string name="btn_create">Create</string>
+    <string name="btn_delete">Delete</string>
+    <string name="tv_delete">¿Desea Eliminar?</string>
+    <string name="servicem_service">Servicio</string>
+    <string name="servicem_servic">Contador</string>
+    <string name="servicem_price">Costo</string>
+    <string name="servicem_example">45000</string>
+    <string name="servicem_base">Base</string>
+    <string name="servicem_administrac_n">Administracón</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >3 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="description_todo">TODO</string>
+    <string name="ed_image">image.png</string>
+    <string name="telephone">telephone</string>
+    <string name="role_admin_tv">ROLE_ADMIN</string>
+    <string name="password">**********</string>
+</resources>

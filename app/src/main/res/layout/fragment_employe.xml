@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/framentEmploye"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".ui.employe.EmployeFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvEmployeAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbAddEmploye"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/primary_second"
+        android:src="@drawable/ic_add"
+        app:tint="@color/text" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbAddLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/primary_second"
+        android:src="@drawable/ic_add"
+        app:tint="@color/text" />
+
+    <ProgressBar
+        android:id="@+id/pbEm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/secondary_second" />
+</FrameLayout>
