@@ -53,9 +53,6 @@ android {
 }
 
 dependencies {
-    implementation("androidx.annotation:annotation:1.6.0")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     val navVersion = "2.7.5"
     val retroGson = "2.9.0"
     val okhtt = "4.3.1"
@@ -88,6 +85,9 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     testImplementation("io.kotlintest:kotlintest-runner-junit5:3.4.2")
     testImplementation("io.mockk:mockk:1.12.3")
+    // https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-test
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
+
 
     //UITesting
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

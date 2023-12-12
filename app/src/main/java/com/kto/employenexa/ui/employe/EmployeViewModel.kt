@@ -15,7 +15,7 @@ import javax.inject.Inject
 
 @HiltViewModel //para recibir cosas injectadas  además se puede inyectar reposi o el usecase
 class EmployeViewModel @Inject constructor(
-    private val getEmploye: GetEmploye, private val deleteEmploye: DeleteEmploye
+    private val getEmploye: GetEmploye, private val deleteEmploye: DeleteEmploye,
 ) : ViewModel() {
     /*
         private var _employe =

@@ -8,6 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.PermissionChecker
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -27,12 +30,31 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class EmployeFragment : Fragment() {
 
+    companion object {
+        private const val CAMERA_PERMISION = android.Manifest.permission.CAMERA
+    }
+
     private val employeViewModel by viewModels<EmployeViewModel>()//conectar frag con el viewModel
 
     private lateinit var employeAdapter: EmployeAdapter //conectar para imprimir data
 
     private var _binding: FragmentEmployeBinding? = null
     private val binding get() = _binding!!
+
+    private val requestPermisionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { isGranted ->
+        if (isGranted) {
+            operationStart()
+        } else {
+            Toast.makeText(requireContext(), "Acepta los permisos", Toast.LENGTH_LONG).show()
+        }
+    }
+
+    private fun operationStart() {
+
+    }
+
 
     override fun onResume() {
         super.onResume()
@@ -41,8 +63,20 @@ class EmployeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {//PARA CONFIGURACIONES
         super.onViewCreated(view, savedInstanceState)
+        if (checkCameraPermission()) {
+            operationStart()
+        } else {
+            requestPermisionLauncher.launch(CAMERA_PERMISION)
+        }
         employeViewModel.getEmployes()//cargando employes
         initUI()
+    }
+
+    private fun checkCameraPermission(): Boolean {
+        return PermissionChecker.checkSelfPermission(
+            requireContext(),
+            CAMERA_PERMISION
+        ) == PermissionChecker.PERMISSION_GRANTED
     }
 
     private fun initUI() {
