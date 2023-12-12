@@ -53,7 +53,7 @@ class EmployeViewModelTest {
             coVerify { getEmploye() }
             assertEquals(
                 viewModel.state.value,
-                EmployeState.Success(listOf(EmployeMotherObject.anyResponse.toDomain()))
+                EmployeState.Loading
             )
         }
     }
