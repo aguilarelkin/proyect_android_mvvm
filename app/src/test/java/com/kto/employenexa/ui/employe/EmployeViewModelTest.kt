@@ -61,8 +61,10 @@ class EmployeViewModelTest {
     @Test
     fun `when response is null getEmployes should val result return state Error of String`() {
         viewModel = EmployeViewModel(getEmploye, deleteEmploye)
-        coEvery { getEmploye() } returns null
-        viewModel.getEmployes()
+        runBlocking {
+            coEvery { getEmploye() } returns null
+            viewModel.getEmployes()
+        }
         runBlocking {
             coVerify { getEmploye() }
             assertEquals(viewModel.state.value, EmployeState.Error("Error :(("))
@@ -73,9 +75,11 @@ class EmployeViewModelTest {
     fun `when response is corret deleteEmployeId should return state Success of employeModel`() {
         viewModel = EmployeViewModel(getEmploye, deleteEmploye)
         val id = "1"
-        coEvery { deleteEmploye(id) } returns "Delete Correct"
-        coEvery { getEmploye() } returns listOf(EmployeMotherObject.anyResponse.toDomain())
-        viewModel.deleteEmployeId(id)
+        runBlocking {
+            coEvery { deleteEmploye(id) } returns "Delete Correct"
+            coEvery { getEmploye() } returns listOf(EmployeMotherObject.anyResponse.toDomain())
+            viewModel.deleteEmployeId(id)
+        }
         runBlocking {
             coVerify { deleteEmploye(id) }
             coVerify { getEmploye() }
