@@ -1,4 +1,4 @@
-<h1 style="center" >Application for Android with Jetpack Compose</h1>
+<h1 style="center" >Application for Android with XML</h1>
 <p>Permite realizar operaciones CRUD y consume una API REST desarrollada con Spring Framework, se desarrolló con tecnologías como DaggerHilt, Navigation, MVVM, Retrofit, DataBinding, Fragment, JUnit5, Mockk, XML and CI/CD con GitHub Actions</p>
 
 # Stack
