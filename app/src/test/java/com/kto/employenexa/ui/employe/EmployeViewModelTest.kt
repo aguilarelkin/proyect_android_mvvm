@@ -63,13 +63,12 @@ class EmployeViewModelTest {
         viewModel = EmployeViewModel(getEmploye, deleteEmploye)
         runBlocking {
             coEvery { getEmploye() } returns null
-            viewModel.getEmployes()
-            runBlocking {
+        }
+                  viewModel.getEmployes()
+        runBlocking {
                 coVerify { getEmploye() }
                 assertEquals(viewModel.state.value, EmployeState.Error("Error :(("))
-            }
         }
-       
     }
 
     @Test
