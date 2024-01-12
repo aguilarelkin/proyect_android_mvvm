@@ -61,15 +61,15 @@ class EmployeViewModelTest {
     @Test
     fun `when response is null getEmployes should val result return state Error of String`() {
         viewModel = EmployeViewModel(getEmploye, deleteEmploye)
-        viewModel.state.value =  EmployeState.Loading
         runBlocking {
             coEvery { getEmploye() } returns null
             viewModel.getEmployes()
+            runBlocking {
+                coVerify { getEmploye() }
+                assertEquals(viewModel.state.value, EmployeState.Error("Error :(("))
+            }
         }
-        runBlocking {
-            coVerify { getEmploye() }
-            assertEquals(viewModel.state.value, EmployeState.Error("Error :(("))
-        }
+       
     }
 
     @Test
